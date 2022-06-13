@@ -1,4 +1,4 @@
-@import 'src/assets/scss/mixins';
+@import 'src/scss/mixins';
 
 $transition-duration: 0.5s;
 
@@ -6,22 +6,18 @@ $transition-duration: 0.5s;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+  width: 100%;
+  height: 100%;
 
-  @include sm {
+  @include md {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
   }
 
   .card {
-    width: 200px;
-    height: 250px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-
-    @include sm {
-      width: 100%;
-    }
 
     .bg {
       position: absolute;
@@ -29,6 +25,9 @@ $transition-duration: 0.5s;
       bottom: 0;
       left: 0;
       right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       background-image: url("https://source.unsplash.com/random/200x250");
       background-repeat: no-repeat;
       background-position: center;
@@ -43,18 +42,27 @@ $transition-duration: 0.5s;
     }
 
     .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       height: 100%;
       color: white;
-      text-align: center;
+      font-weight: bold;
+      font-family: "Times New Roman", serif;
+      font-size: 2rem;
       padding: 10%;
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(255, 255, 255, 0) 100%);
       transition: $transition-duration ease;
       transform: translateY(-100%);
 
+      @include md {
+        transform: translateY(0);
+      }
+
       &.hovered {
-        background: linear-gradient(
-            rgba(0, 0, 0, 0.75) 0%,
-            rgba(0, 0, 0, 0.75) 15%,
-            rgba(255, 255, 255, 0) 50%);
         transition: $transition-duration ease;
         transform: translateY(0);
       }

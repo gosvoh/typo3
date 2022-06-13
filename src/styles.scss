@@ -1,14 +1,11 @@
-@use '@angular/material' as mat;
+@import "scss/colors";
 
-//region Theming
-@include mat.core();
-
-$dark-bg: mat.get-color-from-palette(mat.$grey-palette, 900);
-//endregion
+:root {
+  font-size: 20px;
+}
 
 * {
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box;
 }
 
 html, body, app-root {
@@ -16,18 +13,27 @@ html, body, app-root {
   min-width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 body {
-  background-color: $dark-bg;
+  background-color: $grey-900;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: white;
 }
 
-app-root > * {
-  max-width: 65%;
+app-root > *:not(router-outlet) {
+  width: 60%;
+  margin: 5%;
+
+  @include lg {
+    width: 75%;
+  }
+
+  @include md {
+    width: 85%;
+  }
 }
 
 h1, h2 {
@@ -37,8 +43,23 @@ h1, h2 {
 .loading {
   color: white;
   font-size: 3rem;
+  align-self: center;
+  text-align: center;
 }
 
-.centered {
-  margin: 2rem auto;
+.backBtn {
+  width: 4rem;
+  height: 4rem;
+  background-color: $grey-300;
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  cursor: pointer;
+
+  img {
+    transform: translateX(-0.1rem);
+  }
 }
