@@ -2,8 +2,10 @@
 @import "src/scss/colors";
 @import "src/scss/fonts";
 
-:host {
-  font-family: "Times New Roman", serif;
+p {
+  font-size: 125%;
+  font-family: "GOST 2.304", "Arial", sans-serif;
+  font-style: normal;
 }
 
 h1, h2, h3, .source {
@@ -26,7 +28,6 @@ img {
 }
 
 blockquote {
-  background-color: $grey-700;
   padding: 1.5rem;
   border-radius: 0.5rem;
   position: relative;

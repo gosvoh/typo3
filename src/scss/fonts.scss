@@ -1,16 +1,22 @@
 @font-face {
   font-family: "Tolkien Cyrillic";
   src: url("../assets/fonts/TOLKIENCYR.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Ringbearer";
   src: url("../assets/fonts/Ringbearer.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Stylo";
   src: url("../assets/fonts/stylo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -29,6 +35,34 @@
   url('../assets/fonts/troika.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "GOST 2.304";
+  src: url("../assets/fonts/gost_2.304.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GOST 2.304";
+  src: url("../assets/fonts/gost_2.304_Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GOST 2.304";
+  src: url("../assets/fonts/gost_2.304_italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GOST 2.304";
+  src: url("../assets/fonts/gost_2.304_Bold_Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap');
