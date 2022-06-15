@@ -4,11 +4,6 @@
 
 $transition-duration: 0.5s;
 
-.hodor {
-  height: 100%;
-  width: 100%;
-}
-
 .cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -94,27 +89,6 @@ $transition-duration: 0.5s;
       &.limbo {
         font-family: "Troika", sans-serif;
       }
-    }
-  }
-}
-
-a {
-  color: white;
-  display: block;
-
-  .changelog {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $grey-800;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.25s ease;
-
-    &:hover {
-      background-color: $grey-700;
-      text-decoration: underline;
     }
   }
 }
