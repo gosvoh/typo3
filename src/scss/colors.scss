@@ -4,6 +4,7 @@
 @include mat.core();
 
 $grey-900: mat.get-color-from-palette(mat.$grey-palette, 900);
+$grey-800: mat.get-color-from-palette(mat.$grey-palette, 800);
 $grey-700: mat.get-color-from-palette(mat.$grey-palette, 700);
 $grey-500: mat.get-color-from-palette(mat.$grey-palette, 500);
 $grey-300: mat.get-color-from-palette(mat.$grey-palette, 500);
