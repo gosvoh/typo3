@@ -81,25 +81,6 @@ img {
     display: block;
     width: 100%;
   }
-
-  ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    background-color: $grey-500;
-    padding: 0.25rem;
-    border-radius: 1rem;
-
-    li:first-child {
-      border-right: 0.1rem solid $grey-900;
-    }
-
-    li {
-      width: 100%;
-      text-align: center;
-    }
-  }
 }
 
 .non-line,
@@ -118,7 +99,7 @@ img {
 }
 
 /* https://stackoverflow.com/questions/62103180 */
-.imgfix {
+.imgFix {
   height: 0;
   min-height: 100%;
   width: 100%;
