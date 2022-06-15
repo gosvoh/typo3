@@ -1,7 +1,13 @@
 @import 'src/scss/mixins';
 @import "src/scss/fonts";
+@import "src/scss/colors";
 
 $transition-duration: 0.5s;
+
+.hodor {
+  height: 100%;
+  width: 100%;
+}
 
 .cards-container {
   display: grid;
@@ -20,6 +26,8 @@ $transition-duration: 0.5s;
     overflow: hidden;
     cursor: pointer;
     transition: $transition-duration ease;
+    width: 100%;
+    height: 100%;
 
     .bg {
       position: absolute;
@@ -89,3 +97,25 @@ $transition-duration: 0.5s;
     }
   }
 }
+
+a {
+  color: white;
+  display: block;
+
+  .changelog {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $grey-800;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: $grey-700;
+      text-decoration: underline;
+    }
+  }
+}
+
