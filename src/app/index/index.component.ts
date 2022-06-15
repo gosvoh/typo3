@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Title} from "@angular/platform-browser";
+import {ImageService} from "../ImageService";
+import {filter} from "rxjs";
 
 @Component({
   selector: 'app-index',
@@ -7,8 +9,9 @@ import {Title} from "@angular/platform-browser";
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
+  loaded = false;
 
-  constructor(title: Title) {
+  constructor(private imageService: ImageService, title: Title) {
     title.setTitle('4 статьи')
   }
 
@@ -31,6 +34,9 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.imageService.imagesLoading$
+      .pipe(filter(r => r === 0))
+      .subscribe(_ => this.loaded = true);
   }
 
 }

@@ -1,29 +1,31 @@
-<div class="cards-container">
-  <div class="card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="/tnr-hist">
-    <img class="bg" src="assets/img/tnr-thumb.jpg" alt="">
-    <div class="content">
-      <p>Times New Roman</p>
+<app-loading *ngIf="!loaded"></app-loading>
+
+<div [hidden]="!loaded" class="cards-container">
+  <div class="card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="/olds">
+    <img class="bg olds" src="../../assets/img/olds/thumb.jpg" alt="">
+    <div class="content olds">
+      <p>В&nbsp;бой идут одни старики</p>
     </div>
   </div>
 
-  <div class="card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="link">
-    <div class="bg"></div>
-    <div class="content">
-      <h2>Card</h2>
+  <div class="card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="/lembas">
+    <img class="bg" src="../../assets/img/lembas/thumb.jpg" alt="">
+    <div class="content lembas">
+      <h2>Лембас</h2>
     </div>
   </div>
 
-  <div class="card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="link">
-    <div class="bg"></div>
-    <div class="content">
-      <h2>Card</h2>
+  <div class="card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="/arts">
+    <img class="bg" src="../../assets/img/arts/thumb.jpg" alt="">
+    <div class="content arts">
+      <h2>Стили рисования</h2>
     </div>
   </div>
 
-  <div class="card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="link">
-    <div class="bg"></div>
-    <div class="content">
-      <h2>Card</h2>
+  <div class="card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="/limbo">
+    <img class="bg" src="../../assets/img/limbo/thumb.jpg" alt="">
+    <div class="content limbo">
+      <h2>Limbo</h2>
     </div>
   </div>
 </div>

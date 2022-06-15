@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Tolkien Cyrillic";
+  src: url("../assets/fonts/TOLKIENCYR.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ringbearer";
+  src: url("../assets/fonts/Ringbearer.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Stylo";
+  src: url("../assets/fonts/stylo.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DS Broadbrush";
+  src: url('../assets/fonts/DSBroadBrush.woff2') format('woff2'),
+  url('../assets/fonts/DSBroadBrush.woff') format('woff'),
+  url('../assets/fonts/DSBroadBrush.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Troika';
+  src: url('../assets/fonts/troika.woff2') format('woff2'),
+  url('../assets/fonts/troika.woff') format('woff'),
+  url('../assets/fonts/troika.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');

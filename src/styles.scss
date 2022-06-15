@@ -1,7 +1,11 @@
 @import "scss/colors";
 
 :root {
-  font-size: 20px;
+  font-size: 22px;
+
+  @include sm {
+    font-size: 16px;
+  }
 }
 
 * {
@@ -47,19 +51,24 @@ h1, h2 {
   text-align: center;
 }
 
-.backBtn {
-  width: 4rem;
-  height: 4rem;
-  background-color: $grey-300;
-  padding: 1rem;
-  border: none;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 5%;
-  left: 5%;
-  cursor: pointer;
+[hidden] {
+  display: none !important;
+}
 
-  img {
-    transform: translateX(-0.1rem);
+.invisible {
+  visibility: hidden;
+}
+
+.source {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
   }
 }

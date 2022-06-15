@@ -1,0 +1,125 @@
+@import "src/scss/fonts";
+@import "src/scss/colors";
+
+:host {
+  font-family: "Neucha", sans-serif;
+}
+
+h1, h2, .source {
+  font-family: "Stylo", sans-serif;
+}
+
+.images {
+  display: flex;
+  width: 100%;
+  height: 75vh;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+
+  > * {
+    height: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+img {
+  object-fit: cover;
+}
+
+.anime {
+  display: grid;
+  grid-template-areas:
+    "h h"
+    "l r";
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 3rem;
+
+  p {
+    grid-area: r;
+  }
+
+  h2 {
+    grid-area: h;
+  }
+}
+
+.realism {
+  display: grid;
+  grid-template-areas:
+    "h h h"
+    "l m r";
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 3rem;
+
+  img:first-child {
+    grid-area: l;
+  }
+
+  img:last-child {
+    grid-area: r;
+  }
+
+  p {
+    grid-area: m;
+  }
+
+  h2 {
+    grid-area: h;
+  }
+}
+
+.mult {
+  img:first-of-type {
+    height: 35vh;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    background-color: $grey-500;
+    padding: 0.25rem;
+    border-radius: 1rem;
+
+    li:first-child {
+      border-right: 0.1rem solid $grey-900;
+    }
+
+    li {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.non-line,
+.line-art {
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.onw-style-intro {
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* https://stackoverflow.com/questions/62103180 */
+.imgfix {
+  height: 0;
+  min-height: 100%;
+  width: 100%;
+}

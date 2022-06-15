@@ -1,4 +1,5 @@
 @import 'src/scss/mixins';
+@import "src/scss/fonts";
 
 $transition-duration: 0.5s;
 
@@ -18,20 +19,13 @@ $transition-duration: 0.5s;
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    transition: $transition-duration ease;
 
     .bg {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      background-image: url("https://source.unsplash.com/random/200x250");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
       z-index: -1;
       transition: $transition-duration ease;
 
@@ -39,32 +33,58 @@ $transition-duration: 0.5s;
         filter: blur(5px);
         transition: $transition-duration ease;
       }
+
+      &.olds {
+        filter: grayscale(1);
+      }
     }
 
     .content {
+      position: absolute;
+      top: 0;
+      left: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      width: 100%;
       height: 100%;
       color: white;
       font-weight: bold;
-      font-family: "Times New Roman", serif;
-      font-size: 2rem;
+      font-size: 1.5rem;
       padding: 10%;
       background: linear-gradient(
           rgba(0, 0, 0, 0.8) 0%,
           rgba(255, 255, 255, 0) 100%);
       transition: $transition-duration ease;
-      transform: translateY(-100%);
+      transform: translateY(-10%);
+      opacity: 0;
 
       @include md {
         transform: translateY(0);
+        opacity: 1;
       }
 
       &.hovered {
         transition: $transition-duration ease;
         transform: translateY(0);
+        opacity: 1;
+      }
+
+      &.olds {
+        font-family: "DS Broadbrush", serif;
+      }
+
+      &.lembas {
+        font-family: "Tolkien Cyrillic", serif;
+      }
+
+      &.arts {
+        font-family: "Stylo", sans-serif;
+      }
+
+      &.limbo {
+        font-family: "Troika", sans-serif;
       }
     }
   }
